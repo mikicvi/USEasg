@@ -14,11 +14,15 @@ class Customer
         telHome : String
         telWork : String
 
+end
+
 
 class Invoice 
     attributes
         number : String
         amount : Double
+
+end
 
 
 class ReceivablesAccount
@@ -31,8 +35,13 @@ class ReceivablesAccount
         120DayBalance : Double
         collections : Double
 
+end
+
+
 class ARProcessor
     --operations
+
+end
 
 
 association CustToRecAcct between
