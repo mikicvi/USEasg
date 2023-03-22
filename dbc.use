@@ -20,7 +20,7 @@ end
 class Invoice 
     attributes
         number : String
-        amount : Double
+        amount : Real
 
 end
 
@@ -28,12 +28,12 @@ end
 class ReceivablesAccount
     attributes
         number : String
-        currentBalance : Double
-        30DayBalance : Double
-        60DayBalance : Double
-        90DayBalance : Double
-        120DayBalance : Double
-        collections : Double
+        currentBalance : Real
+        day30Balance : Real
+        day60Balance : Real
+        day90Balance : Real
+        day120Balance : Real
+        collections : Real
 
 end
 
