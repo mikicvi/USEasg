@@ -39,9 +39,27 @@ end
 
 
 class ARProcessor
-    --operations
+    operations
+    ProcessInvoices(arAccount : ReceivablesAccount)
+        begin
+            for invoice in arAccount.unprocessedInvoices do
+                if invoice.amount > 0 then
+                    arAccount.currentBalance := arAccount.currentBalance + invoice.amount;
+                    delete (arAccount, invoice) from RecAcctToInvoiceUnproc;
+                    insert (arAccount, invoice) into RecAcctToInvoiceProcc;
+                end;
+            end
+        end
+    EndOfMonthUpdate(arAccount : ReceivablesAccount)
+        begin
+            arAccount.day120Balance := arAccount.day90Balance;
+            arAccount.day90Balance := arAccount.day60Balance;
+            arAccount.day60Balance := arAccount.day30Balance;
+            arAccount.day30Balance := arAccount.currentBalance;
+            arAccount.currentBalance := 0;
+        end
+    end
 
-end
 
 
 association CustToRecAcct between 
@@ -59,4 +77,26 @@ association RecAcctToInvoiceProcc between
     ReceivablesAccount [0..1] role procc
     Invoice [0..*] role processedInvoices
 end
+
+constraints
+--receivablesAccount invariant
+--an invoice cannot be both unprocessed and processed
+context ReceivablesAccount inv notboth:
+    self.unprocessedInvoices->intersection(self.processedInvoices)->isEmpty()
+
+context ReceivablesAccount inv InvoiceNumCheck:
+    self.number.size() = 6
+
+--ARProcessor::ProcessInvoices pre-conditions
+--There must be some unprocessedInvoices
+--need to change later
+context ARProcessor::ProcessInvoices (arAccount:ReceivablesAccount) pre unprocessedInvoicesExist:
+    arAccount.unprocessedInvoices->notEmpty()
+
+--ARProcessor::ProcessInvoices post-conditions
+--unprocessed invoices become processedInvocies
+context ARProcessor::ProcessInvoices(arAccount:ReceivablesAccount) post unprocessedBecomeProcessed:
+    arAccount.unprocessedInvoices->isEmpty() and
+    --processed invocies includes unprocessed invoices in pre-state
+    arAccount.processedInvoices->includesAll(arAccount.unprocessedInvoices@pre)
 
