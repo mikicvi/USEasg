@@ -44,9 +44,19 @@ class ARProcessor
 end
 
 
-association CustToRecAcct between
+association CustToRecAcct between 
     Customer [1] role customer
-    ReceivablesAccount [0..1] role receivablesAccount
+    ReceivablesAccount [0..1] 
+
 end
 
+association RecAcctToInvoiceUnproc between
+    ReceivablesAccount [0..1] role unprocc
+    Invoice [0..*] role unprocessedInvoices
+end
+
+association RecAcctToInvoiceProcc between
+    ReceivablesAccount [0..1] role procc
+    Invoice [0..*] role processedInvoices
+end
 
