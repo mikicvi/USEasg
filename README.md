@@ -19,8 +19,8 @@ system.
 design by contact code in Java for Library or restaurant.
 
 ---
-# You must produce a report in PDF which explanatory test and diagrams. Quality of report just as 
-important as the diagrams, even more so.
+# You must produce a report in PDF which explanatory test and diagrams. 
+- Quality of report just as important as the diagrams, even more so.
 
 # In the first two options, the following tpes of diagram would be required: class, sequence, 
 statemachine (statechart), object. Also OCL contracts for some of the operations along with !openter 
