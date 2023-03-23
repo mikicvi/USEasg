@@ -58,7 +58,7 @@ class ARProcessor
             arAccount.day30Balance := arAccount.currentBalance;
             arAccount.currentBalance := 0;
         end
-    end
+end
 
 
 
@@ -99,4 +99,18 @@ context ARProcessor::ProcessInvoices(arAccount:ReceivablesAccount) post unproces
     arAccount.unprocessedInvoices->isEmpty() and
     --processed invocies includes unprocessed invoices in pre-state
     arAccount.processedInvoices->includesAll(arAccount.unprocessedInvoices@pre)
+
+--ARProcessor::EndOfMonthUpdate pre conditions
+--there are no unprocessed invoices
+
+context ARProcessor::EndOfMonthUpdate(arAccount:ReceivablesAccount) pre noUnprocessedInvoices:
+    arAccount.unprocessedInvoices->isEmpty()
+
+--ARProcessor::EndOfMonthUpdate post conditions
+context ARProcessor::EndOfMonthUpdate(arAccount:ReceivablesAccount) post balancesUpdated:
+    arAccount.day120Balance = arAccount.day90Balance@pre and
+    arAccount.day90Balance = arAccount.day60Balance@pre and
+    arAccount.day60Balance = arAccount.day30Balance@pre and
+    arAccount.day30Balance = arAccount.currentBalance@pre and
+    arAccount.currentBalance = 0
 

@@ -1,0 +1,5 @@
+--test pre and post conditions for processInvoices
+!openter arp1 ProcessInvoices(acc1)
+!delete (ReceivablesAccount1,Invoice1) from RecAcctToInvoiceUnproc
+!insert (ReceivablesAccount1,Invoice1) into RecAcctToInvoiceProcc
+!opexit
