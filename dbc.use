@@ -1,5 +1,6 @@
 model InvoiceProcessing
 
+enum InvoiceStatus{unprocessed, processed}
 
 class Customer
     attributes
@@ -21,6 +22,16 @@ class Invoice
     attributes
         number : String
         amount : Real
+    statemachines
+    psm States
+    states
+        newInvoice : initial
+        unprocessed
+        processed
+    transitions
+        newInvoice -> unprocessed {create}
+        unprocessed -> processed {}
+    end
 
 end
 
@@ -35,28 +46,34 @@ class ReceivablesAccount
         day120Balance : Real
         collections : Real
 
+
 end
 
 
 class ARProcessor
     operations
-    ProcessInvoices(arAccount : ReceivablesAccount)
+    --pass a set of receivables accounts to be processed
+    ProcessInvoices(arAccounts : Set(ReceivablesAccount))
         begin
-            for invoice in arAccount.unprocessedInvoices do
-                if invoice.amount > 0 then
-                    arAccount.currentBalance := arAccount.currentBalance + invoice.amount;
-                    delete (arAccount, invoice) from RecAcctToInvoiceUnproc;
-                    insert (arAccount, invoice) into RecAcctToInvoiceProcc;
-                end;
+            for arAccount in arAccounts do
+                for invoice in arAccount.unprocessedInvoices do
+                    if invoice.amount > 0 then
+                        arAccount.currentBalance := arAccount.currentBalance + invoice.amount;
+                        delete (arAccount, invoice) from RecAcctToInvoiceUnproc;
+                        insert (arAccount, invoice) into RecAcctToInvoiceProcc;
+                    end;
+                end
             end
         end
-    EndOfMonthUpdate(arAccount : ReceivablesAccount)
+    EndOfMonthUpdate(arAccounts : Set(ReceivablesAccount))
         begin
-            arAccount.day120Balance := arAccount.day90Balance;
-            arAccount.day90Balance := arAccount.day60Balance;
-            arAccount.day60Balance := arAccount.day30Balance;
-            arAccount.day30Balance := arAccount.currentBalance;
-            arAccount.currentBalance := 0;
+            for arAccount in arAccounts do
+                arAccount.day120Balance := arAccount.day90Balance;
+                arAccount.day90Balance := arAccount.day60Balance;
+                arAccount.day60Balance := arAccount.day30Balance;
+                arAccount.day30Balance := arAccount.currentBalance;
+                arAccount.currentBalance := 0;
+            end
         end
 end
 
@@ -69,12 +86,12 @@ association CustToRecAcct between
 end
 
 association RecAcctToInvoiceUnproc between
-    ReceivablesAccount [0..1] role unprocc
+    ReceivablesAccount [0..1] role unaccount
     Invoice [0..*] role unprocessedInvoices
 end
 
 association RecAcctToInvoiceProcc between
-    ReceivablesAccount [0..1] role procc
+    ReceivablesAccount [0..1] role account
     Invoice [0..*] role processedInvoices
 end
 
@@ -89,28 +106,27 @@ context ReceivablesAccount inv InvoiceNumCheck:
 
 --ARProcessor::ProcessInvoices pre-conditions
 --There must be some unprocessedInvoices
---need to change later
-context ARProcessor::ProcessInvoices (arAccount:ReceivablesAccount) pre unprocessedInvoicesExist:
-    arAccount.unprocessedInvoices->notEmpty()
+context ARProcessor::ProcessInvoices (arAccounts: Set(ReceivablesAccount)) pre unprocessedInvoicesExist:
+    arAccounts->forAll(arAccount | arAccount.unprocessedInvoices->notEmpty())
 
 --ARProcessor::ProcessInvoices post-conditions
 --unprocessed invoices become processedInvocies
-context ARProcessor::ProcessInvoices(arAccount:ReceivablesAccount) post unprocessedBecomeProcessed:
-    arAccount.unprocessedInvoices->isEmpty() and
-    --processed invocies includes unprocessed invoices in pre-state
-    arAccount.processedInvoices->includesAll(arAccount.unprocessedInvoices@pre)
+context ARProcessor::ProcessInvoices(arAccounts: Set(ReceivablesAccount)) post unprocessedBecomeProcessed:
+    arAccounts->forAll(arAccount | arAccount.unprocessedInvoices->isEmpty()) and
+--processed invocies includes unprocessed invoices in pre-state
+    arAccounts->forAll(arAccount | arAccount.processedInvoices->includesAll(arAccount.unprocessedInvoices@pre))
 
 --ARProcessor::EndOfMonthUpdate pre conditions
 --there are no unprocessed invoices
-
-context ARProcessor::EndOfMonthUpdate(arAccount:ReceivablesAccount) pre noUnprocessedInvoices:
-    arAccount.unprocessedInvoices->isEmpty()
+context ARProcessor::EndOfMonthUpdate(arAccounts:Set(ReceivablesAccount)) pre noUnprocessedInvoices:
+    arAccounts->forAll(arAccount |arAccount.unprocessedInvoices->isEmpty())
 
 --ARProcessor::EndOfMonthUpdate post conditions
-context ARProcessor::EndOfMonthUpdate(arAccount:ReceivablesAccount) post balancesUpdated:
+context ARProcessor::EndOfMonthUpdate(arAccounts:Set(ReceivablesAccount)) post balancesUpdated:
+    arAccounts->forAll(arAccount |
     arAccount.day120Balance = arAccount.day90Balance@pre and
     arAccount.day90Balance = arAccount.day60Balance@pre and
     arAccount.day60Balance = arAccount.day30Balance@pre and
     arAccount.day30Balance = arAccount.currentBalance@pre and
-    arAccount.currentBalance = 0
+    arAccount.currentBalance = 0)
 

@@ -10,169 +10,100 @@
         <showgrid>false</showgrid>
         <ShowStates>false</ShowStates>
     </diagramOptions>
-    <node id="ReceivablesAccount1" sizeCalculated="true" type="Object">
-        <name>ReceivablesAccount1</name>
+    <node id="joe" sizeCalculated="true" type="Object">
+        <name>joe</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>310.4026124093073</x>
-            <y>142.35446220550705</y>
+            <x>21.748540418720722</x>
+            <y>67.58051734394655</y>
         </strategy>
         <hidden>false</hidden>
     </node>
-    <node id="Customer1" sizeCalculated="true" type="Object">
-        <name>Customer1</name>
+    <node id="invoice3" sizeCalculated="true" type="Object">
+        <name>invoice3</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>42.95287568083154</x>
-            <y>14.725024623675836</y>
+            <x>642.2248523146999</x>
+            <y>136.67517185081778</y>
         </strategy>
         <hidden>false</hidden>
     </node>
-    <node id="Invoice1" sizeCalculated="true" type="Object">
-        <name>Invoice1</name>
+    <node id="invoice4" sizeCalculated="true" type="Object">
+        <name>invoice4</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>441.3877197188449</x>
-            <y>9.232066224043493</y>
+            <x>790.6287068935319</x>
+            <y>122.94153727204605</y>
         </strategy>
         <hidden>false</hidden>
     </node>
-    <node id="ARProcessor1" sizeCalculated="true" type="Object">
-        <name>ARProcessor1</name>
+    <node id="invoice1" sizeCalculated="true" type="Object">
+        <name>invoice1</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>28.694031496869826</x>
-            <y>217.15372320052126</y>
+            <x>522.0277259002132</x>
+            <y>61.35633464378947</y>
         </strategy>
         <hidden>false</hidden>
     </node>
-    <node id="Invoice2" sizeCalculated="true" type="Object">
-        <name>Invoice2</name>
+    <node id="invoice2" sizeCalculated="true" type="Object">
+        <name>invoice2</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>247.2879527360135</x>
-            <y>1.7765208853203944</y>
+            <x>345.0521021668179</x>
+            <y>66.96534068579894</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="acc2" sizeCalculated="true" type="Object">
+        <name>acc2</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>666.8120724066114</x>
+            <y>268.7999383273833</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="acc1" sizeCalculated="true" type="Object">
+        <name>acc1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>432.2819919768374</x>
+            <y>246.63479931535414</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="arp1" sizeCalculated="true" type="Object">
+        <name>arp1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>82.66661130144578</x>
+            <y>357.7095245506031</y>
         </strategy>
         <hidden>false</hidden>
     </node>
     <edge type="BinaryEdge">
-        <source>Customer1</source>
-        <target>ReceivablesAccount1</target>
-        <name>CustToRecAcct</name>
-        <properties>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
-                <name>receivablesAccount</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
-                <name>0..1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
-                <name>CustToRecAcct</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <offsetX>0.0</offsetX>
-                    <offsetY>-10.0</offsetY>
-                    <related length="2">
-                        <related0>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::0</related0>
-                        <related1>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::1</related1>
-                    </related>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
-                <name>1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>BOTTOM</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
-                <name>customer</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-        </properties>
-        <waypoints>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
-                <name>0</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                </strategy>
-                <id>0</id>
-                <specialid>1</specialid>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
-                <name>1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                </strategy>
-                <id>1</id>
-                <specialid>2</specialid>
-                <hidden>false</hidden>
-            </edgeproperty>
-        </waypoints>
-        <hidden>false</hidden>
-        <linkValue>[CustToRecAcct : (customer:Customer1, receivablesAccount:ReceivablesAccount1)]</linkValue>
-    </edge>
-    <edge type="BinaryEdge">
-        <source>ReceivablesAccount1</source>
-        <target>Invoice2</target>
+        <source>acc2</source>
+        <target>invoice3</target>
         <name>RecAcctToInvoiceProcc</name>
         <properties>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>processedInvoices</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::1</attached>
+                    <userOffsetX>17.0</userOffsetX>
+                    <userOffsetY>13.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
                 <name>*</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::1</attached>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
                 <name>RecAcctToInvoiceProcc</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
                     <userOffsetX>0.0</userOffsetX>
@@ -180,30 +111,30 @@
                     <offsetX>0.0</offsetX>
                     <offsetY>-10.0</offsetY>
                     <related length="2">
-                        <related0>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::0</related0>
-                        <related1>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::1</related1>
+                        <related0>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::0</related0>
+                        <related1>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::1</related1>
                     </related>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
                 <name>procc</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::0</attached>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
                 <name>0..1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::0</attached>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
@@ -212,7 +143,7 @@
             </edgeproperty>
         </properties>
         <waypoints>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
                 <name>0</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
                     <userOffsetX>0.0</userOffsetX>
@@ -222,7 +153,7 @@
                 <specialid>1</specialid>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
                     <userOffsetX>0.0</userOffsetX>
@@ -234,38 +165,131 @@
             </edgeproperty>
         </waypoints>
         <hidden>false</hidden>
-        <linkValue>[RecAcctToInvoiceProcc : (procc:ReceivablesAccount1, processedInvoices:Invoice2)]</linkValue>
+        <linkValue>[RecAcctToInvoiceProcc : (procc:acc2, processedInvoices:invoice3)]</linkValue>
     </edge>
     <edge type="BinaryEdge">
-        <source>ReceivablesAccount1</source>
-        <target>Invoice1</target>
-        <name>RecAcctToInvoiceUnproc</name>
+        <source>joe</source>
+        <target>acc1</target>
+        <name>CustToRecAcct</name>
         <properties>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
-                <name>unprocessedInvoices</name>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>receivablesAccount</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::1</attached>
+                    <attached>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
-                <name>*</name>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::1</attached>
+                    <attached>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>CustToRecAcct</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::0</related0>
+                        <related1>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>customer</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[CustToRecAcct : (customer:joe, receivablesAccount:acc1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>acc2</source>
+        <target>invoice4</target>
+        <name>RecAcctToInvoiceUnproc</name>
+        <properties>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>unprocessedInvoices</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>58.0</userOffsetX>
+                    <userOffsetY>22.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
                 <name>RecAcctToInvoiceUnproc</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
                     <userOffsetX>0.0</userOffsetX>
@@ -273,39 +297,39 @@
                     <offsetX>0.0</offsetX>
                     <offsetY>-10.0</offsetY>
                     <related length="2">
-                        <related0>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::0</related0>
-                        <related1>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::1</related1>
+                        <related0>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::0</related0>
+                        <related1>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::1</related1>
                     </related>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
-                <name>unprocc</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::0</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
                 <name>0..1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>0.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
-                    <attached>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::0</attached>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>unprocc</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
         </properties>
         <waypoints>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
                 <name>0</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
                     <userOffsetX>0.0</userOffsetX>
@@ -315,7 +339,7 @@
                 <specialid>1</specialid>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
                     <userOffsetX>0.0</userOffsetX>
@@ -327,6 +351,192 @@
             </edgeproperty>
         </waypoints>
         <hidden>false</hidden>
-        <linkValue>[RecAcctToInvoiceUnproc : (unprocc:ReceivablesAccount1, unprocessedInvoices:Invoice1)]</linkValue>
+        <linkValue>[RecAcctToInvoiceUnproc : (unprocc:acc2, unprocessedInvoices:invoice4)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>acc1</source>
+        <target>invoice1</target>
+        <name>RecAcctToInvoiceUnproc</name>
+        <properties>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>unprocessedInvoices</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>55.0</userOffsetX>
+                    <userOffsetY>10.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>RecAcctToInvoiceUnproc</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::0</related0>
+                        <related1>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>unprocc</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[RecAcctToInvoiceUnproc : (unprocc:acc1, unprocessedInvoices:invoice1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>acc1</source>
+        <target>invoice2</target>
+        <name>RecAcctToInvoiceProcc</name>
+        <properties>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>processedInvoices</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>RecAcctToInvoiceProcc</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::0</related0>
+                        <related1>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>procc</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[RecAcctToInvoiceProcc : (procc:acc1, processedInvoices:invoice2)]</linkValue>
     </edge>
 </diagram_Layout>
