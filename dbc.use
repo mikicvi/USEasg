@@ -22,15 +22,22 @@ class Invoice
     attributes
         number : String
         amount : Real
+    operations
+    ProcessSelf(acc : ReceivablesAccount)
+    begin
+        delete (acc,self) from RecAcctToInvoiceUnproc;
+        insert (acc,self) into RecAcctToInvoiceProcc;
+    end
+
     statemachines
     psm States
     states
         newInvoice : initial
         unprocessed
-        processed
+        processed : final
     transitions
         newInvoice -> unprocessed {create}
-        unprocessed -> processed {}
+        unprocessed -> processed {ProcessSelf()}
     end
 
 end
@@ -45,8 +52,16 @@ class ReceivablesAccount
         day90Balance : Real
         day120Balance : Real
         collections : Real
-
-
+    operations
+        ProcessInvoice()
+        begin
+            for invoice in self.unprocessedInvoices do
+                if invoice.amount > 0 then
+                    self.currentBalance := self.currentBalance + invoice.amount;
+                    invoice.ProcessSelf(self);
+                end;
+            end
+        end
 end
 
 
@@ -56,13 +71,7 @@ class ARProcessor
     ProcessInvoices(arAccounts : Set(ReceivablesAccount))
         begin
             for arAccount in arAccounts do
-                for invoice in arAccount.unprocessedInvoices do
-                    if invoice.amount > 0 then
-                        arAccount.currentBalance := arAccount.currentBalance + invoice.amount;
-                        delete (arAccount, invoice) from RecAcctToInvoiceUnproc;
-                        insert (arAccount, invoice) into RecAcctToInvoiceProcc;
-                    end;
-                end
+                arAccount.ProcessInvoice();
             end
         end
     EndOfMonthUpdate(arAccounts : Set(ReceivablesAccount))

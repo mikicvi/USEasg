@@ -11,8 +11,8 @@
 
 !insert (joe,acc1) into CustToRecAcct
 !insert (acc1,invoice1) into RecAcctToInvoiceUnproc
-!insert (acc1,invoice2) into RecAcctToInvoiceProcc
-!insert (acc2,invoice3) into RecAcctToInvoiceProcc
+!insert (acc1,invoice2) into RecAcctToInvoiceUnproc
+!insert (acc2,invoice3) into RecAcctToInvoiceUnproc
 !insert (acc2,invoice4) into RecAcctToInvoiceUnproc
 
 !set acc1.number := '123456'
