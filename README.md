@@ -1,4 +1,9 @@
-Software Engineering 2 Assignment
+# Software Engineering 2 Assignment
+
+
+## Our choice for this assignment is to construct and test a USE model for Accounts Receivable Processor from design by contract notes.
+- The PDF's will not be included in here
+
 
 You can choose one of the following:
 
@@ -101,3 +106,6 @@ of analysis modelling.
 Submission\
 Report in PDF and USE files (.use and .soil) to be submitted thru
 Brightspace. **Do not use ZIP or RAR**.
+
+### For any unfortunate future TUD students, i hope this helps you, as a guideline for the assignment. 
+-Technological University Dublin, Grangegorman Campus
