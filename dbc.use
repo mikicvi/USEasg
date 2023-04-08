@@ -70,21 +70,21 @@ class ARProcessor
     --pass a set of receivables accounts to be processed
     -- functions are commeted out because of openter testing
     ProcessInvoices(arAccounts : Set(ReceivablesAccount))
-        -- begin
-        --     for arAccount in arAccounts do
-        --         arAccount.ProcessInvoice();
-        --     end
-        -- end
+        begin
+            for arAccount in arAccounts do
+                arAccount.ProcessInvoice();
+            end
+        end
     EndOfMonthUpdate(arAccounts : Set(ReceivablesAccount))
-        -- begin
-        --     for arAccount in arAccounts do
-        --         arAccount.day120Balance := arAccount.day90Balance;
-        --         arAccount.day90Balance := arAccount.day60Balance;
-        --         arAccount.day60Balance := arAccount.day30Balance;
-        --         arAccount.day30Balance := arAccount.currentBalance;
-        --         arAccount.currentBalance := 0;
-        --     end
-        -- end
+        begin
+            for arAccount in arAccounts do
+                arAccount.day120Balance := arAccount.day90Balance;
+                arAccount.day90Balance := arAccount.day60Balance;
+                arAccount.day60Balance := arAccount.day30Balance;
+                arAccount.day30Balance := arAccount.currentBalance;
+                arAccount.currentBalance := 0;
+            end
+        end
 end
 
 

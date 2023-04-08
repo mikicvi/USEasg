@@ -1,0 +1,26 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+
+#Temp files
+.tmp
+~$*
+
+
+# Binary files
+*.doc
+*.docx
+*.jpeg
+*.jpg
+*.ods
+*.pdf
+*.png
+*.ppt
+*.pptx
+*.tiff
+*.xls
+*.xlsx
+*.pdf
