@@ -12,8 +12,8 @@
     <node id="unprocessed" sizeCalculated="true" type="StateNode">
         <name>unprocessed</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
-            <x>19.80693066143948</x>
-            <y>150.61188650771604</y>
+            <x>17.80693066143948</x>
+            <y>145.61188650771604</y>
         </strategy>
         <showInvariant>true</showInvariant>
         <hidden>false</hidden>
@@ -22,7 +22,7 @@
         <name>processed</name>
         <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
             <x>284.82331785516044</x>
-            <y>152.38930935331183</y>
+            <y>147.38930935331183</y>
         </strategy>
         <node id="processed::StateName" sizeCalculated="true" type="StateName">
             <name>processed</name>
@@ -67,55 +67,6 @@
         <hidden>false</hidden>
     </node>
     <edge type="Transition">
-        <source>unprocessed</source>
-        <target>processed</target>
-        <name>ProcessSelf(acc : ReceivablesAccount)/</name>
-        <waypoints>
-            <edgeproperty id="transition::unprocessed::processed::::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
-                <name>0</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                </strategy>
-                <id>0</id>
-                <specialid>1</specialid>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="transition::unprocessed::processed::::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
-                <name>1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                </strategy>
-                <id>1</id>
-                <specialid>2</specialid>
-                <hidden>false</hidden>
-            </edgeproperty>
-        </waypoints>
-        <hidden>false</hidden>
-        <Transitions>
-            <Transition>
-                <trigger>ProcessSelf(acc : ReceivablesAccount)</trigger>
-                <guard/>
-                <post/>
-                <edgeproperty id="ProcessSelf(acc : ReceivablesAccount)/" sizeCalculated="true" type="TransitionLabel" userDefined="true" visible="true">
-                    <name>ProcessSelf(acc : ReceivablesAccount)/</name>
-                    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
-                        <userOffsetX>85.0</userOffsetX>
-                        <userOffsetY>8.0</userOffsetY>
-                        <offsetX>0.0</offsetX>
-                        <offsetY>10.0</offsetY>
-                        <related length="2">
-                            <related0>transition::unprocessed::processed::::WayPoint::0</related0>
-                            <related1>transition::unprocessed::processed::::WayPoint::1</related1>
-                        </related>
-                    </strategy>
-                    <hidden>false</hidden>
-                </edgeproperty>
-            </Transition>
-        </Transitions>
-    </edge>
-    <edge type="Transition">
         <source>newInvoice</source>
         <target>unprocessed</target>
         <name>create/</name>
@@ -157,6 +108,55 @@
                         <related length="2">
                             <related0>transition::newInvoice::unprocessed::::WayPoint::0</related0>
                             <related1>transition::newInvoice::unprocessed::::WayPoint::1</related1>
+                        </related>
+                    </strategy>
+                    <hidden>false</hidden>
+                </edgeproperty>
+            </Transition>
+        </Transitions>
+    </edge>
+    <edge type="Transition">
+        <source>unprocessed</source>
+        <target>processed</target>
+        <name>ProcessSelf(acc : ReceivablesAccount)/</name>
+        <waypoints>
+            <edgeproperty id="transition::unprocessed::processed::::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="transition::unprocessed::processed::::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <Transitions>
+            <Transition>
+                <trigger>ProcessSelf(acc : ReceivablesAccount)</trigger>
+                <guard/>
+                <post/>
+                <edgeproperty id="ProcessSelf(acc : ReceivablesAccount)/" sizeCalculated="true" type="TransitionLabel" userDefined="true" visible="true">
+                    <name>ProcessSelf(acc : ReceivablesAccount)/</name>
+                    <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                        <userOffsetX>145.0</userOffsetX>
+                        <userOffsetY>8.0</userOffsetY>
+                        <offsetX>0.0</offsetX>
+                        <offsetY>10.0</offsetY>
+                        <related length="2">
+                            <related0>transition::unprocessed::processed::::WayPoint::0</related0>
+                            <related1>transition::unprocessed::processed::::WayPoint::1</related1>
                         </related>
                     </strategy>
                     <hidden>false</hidden>
